@@ -35,6 +35,11 @@ export default {
     add () {
       this.strhtml = '<img src="/static/car_1_1_1.png" style="left:283px;position: relative;"></img><img src="/static/car_1_1_1.png" style="left:383px;position: relative;"></img>'
     }
+  },
+  mqtt: {
+    'VueMqtt/car' (data, topic) {
+      console.log(topic + ': ' + String.fromCharCode.apply(null, data))
+    }
   }
 }
 </script>
